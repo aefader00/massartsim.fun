@@ -1,0 +1,22 @@
+.activity {
+  padding: 1em;
+  margin: 0.5em;
+  min-width: 15em;
+  text-align: left;
+  border: 0.2em solid white;
+  border-radius: 1em;
+  background-color: #231f20;
+}
+.activity:hover {
+  color: #231f20;
+  background-color: #f07855;
+  border-color: #f07855;
+}
+
+@media (max-width: 400px) {
+  .activity {
+    margin: 0.25em;
+    padding: 0.5em;
+    min-width: 10em;
+  }
+}

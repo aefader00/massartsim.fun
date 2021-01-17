@@ -1,0 +1,97 @@
+.heading a {
+  margin: auto;
+  color: #231f20;
+  background-color: #f07855;
+  max-width: 25%;
+  padding: 0.25em;
+}
+
+.button {
+  font-family: "roboto";
+  background-color: #f07855;
+  border: 0.25em solid #231f20;
+  border-radius: 0.5em;
+  color: #231f20;
+  padding: 0.35rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #f07855;
+  background-color: white;
+}
+
+.select {
+  font-family: "roboto";
+  font-size: 0.75em;
+  color: #231f20;
+  padding: 0.5rem;
+  border: solid #231f20;
+  border-radius: 0.5em;
+}
+
+.select option {
+  font-family: "roboto";
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table table {
+  margin: auto;
+  border-spacing: 0.5em;
+  max-width: 95%;
+}
+
+.table th,
+.table td {
+  border: 0.2em solid #ffffff;
+  border-radius: 1em;
+}
+
+.timeslot {
+  padding: 1.25em;
+  vertical-align: top;
+}
+
+.label {
+  padding: 1em;
+}
+
+.grid {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0.25em;
+  justify-content: center;
+}
+.grid {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex: wrap;
+  -webkit-flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 400px) {
+  .timeslot {
+    padding: 0.5em;
+    vertical-align: top;
+  }
+
+  .label {
+    padding: 0.25em;
+  }
+  .grid {
+    margin: 0;
+    padding: 0;
+  }
+}
