@@ -8,7 +8,7 @@ export default function Map() {
       <h1 className={styles.heading}>
         <a>COLLABORATION MAP</a>
       </h1>
-      UNDER CONSTRUCTION.
+      <i>REALLY</i> UNDER CONSTRUCTION.
     </Layout>
   );
 }
