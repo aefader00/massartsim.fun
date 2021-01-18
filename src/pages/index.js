@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import Layout from "../../components/layout/layout.js";
 import styles from "../../styles/home.module.css";
@@ -5,6 +6,8 @@ import styles from "../../styles/home.module.css";
 export default function Home() {
   return (
     <Layout>
+      <title>Welcome!</title>
+      <link rel="icon" href="/favicon.ico" />
       <div className={styles.text}>
         <div>
           <h1 className={styles.heading}>
@@ -62,8 +65,11 @@ export default function Home() {
           </p>
           <p>
             Everyone marked on this map has volunteered to be on it. If you'd
-            like to be on the map, contact Anthony Fader at aefader@massart.edu
-            and he will add you as soon as he can.
+            like to be on the map, you can click the button at the top of the
+            page to be given a form to fill out with your name and general
+            location. You don't have to enter your exact address, since entering
+            your neighborhood or even just your town is good enough for the map.
+            Only give as much information as you feel comfortable with.
           </p>
         </div>
         <br />

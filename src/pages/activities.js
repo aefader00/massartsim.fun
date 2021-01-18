@@ -7,8 +7,8 @@ import Link from "next/link";
 import Layout from "../../components/layout/layout.js";
 import styles from "../../styles/activities.module.css";
 
-import { getActivities } from "../../database/getActivities";
-import Activity from "../../components/activity/activity";
+import { getActivities } from "../../database/getActivities.js";
+import Activity from "../../components/activity/activity.js";
 
 export default function Activities({ activities }) {
   const { query } = useRouter();
@@ -77,8 +77,8 @@ export default function Activities({ activities }) {
         </Formik>
       </div>
 
-      <div>
-        <Link href="/activities">
+      <div style={{ margin: "0.5em" }}>
+        <Link href="https://forms.gle/wk73wx2cxbw5DaW3A">
           <button className={styles.button}>
             <a>Want to produce an activity? Submit a proposal here!</a>
           </button>
@@ -102,6 +102,7 @@ export default function Activities({ activities }) {
               <ul className={styles.grid}>
                 {activities.map(
                   ({
+                    id,
                     name,
                     description,
                     time,
@@ -113,6 +114,7 @@ export default function Activities({ activities }) {
                     if (time == 130 && week == weekView) {
                       return (
                         <Activity
+                          key={id}
                           name={name}
                           description={description}
                           producers={producers}

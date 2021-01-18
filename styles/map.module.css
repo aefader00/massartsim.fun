@@ -4,3 +4,64 @@
   background-color: #f07855;
   padding: 0.25em;
 }
+
+.headingLink a {
+  color: #231f20;
+  background-color: #f07855;
+  max-width: 75%;
+  padding: 0.25rem;
+}
+
+.headingLink a:hover {
+  color: #f07855;
+  background-color: #fff;
+}
+
+.popupName a {
+  color: #231f20;
+  background-color: #f07855;
+  max-width: 75%;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.popupName a:hover {
+  color: #f07855;
+  background-color: #fff;
+}
+
+.marker {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.marker img {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+@media (max-width: 400px) {
+  .marker img {
+    width: 4em;
+    height: 4em;
+  }
+}
+
+.button {
+  font-family: "roboto";
+  background-color: #f07855;
+  border: 0.25em solid #231f20;
+  border-radius: 0.5em;
+  color: #231f20;
+  padding: 0.35rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #f07855;
+  background-color: white;
+}
