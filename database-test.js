@@ -11,4 +11,6 @@ const sqlite3 = require("sqlite3");
   await db.migrate({ force: true });
   const activities = await db.all("select * from activities");
   console.log(JSON.stringify(activities, null, 4));
+  const markers = await db.all("select * from markers");
+  console.log(JSON.stringify(markers, null, 4));
 })();
