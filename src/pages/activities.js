@@ -105,18 +105,22 @@ export default function Activities({ activities }) {
                     id,
                     name,
                     description,
-                    time,
+                    timeStart,
+                    timeEnd,
                     week,
                     producers,
                     faculty,
                     link,
                   }) => {
-                    if (time == 130 && week == weekView) {
+                    if (timeStart < 200 && week == weekView) {
                       return (
                         <Activity
+                          style={{ maxWidth: "20em" }}
                           key={id}
                           name={name}
                           description={description}
+                          timeStart={timeStart}
+                          timeEnd={timeEnd}
                           producers={producers}
                           faculty={faculty}
                           link={link}
@@ -136,20 +140,29 @@ export default function Activities({ activities }) {
               <ul className={styles.grid}>
                 {activities.map(
                   ({
+                    id,
                     name,
                     description,
-                    time,
+                    timeStart,
+                    timeEnd,
                     week,
                     producers,
                     faculty,
                     link,
                   }) => {
-                    if (time == 200 && week == weekView) {
+                    if (
+                      timeStart >= 200 &&
+                      timeEnd <= 330 &&
+                      week == weekView
+                    ) {
                       return (
                         <Activity
                           style={{ maxWidth: "20em" }}
+                          key={id}
                           name={name}
                           description={description}
+                          timeStart={timeStart}
+                          timeEnd={timeEnd}
                           producers={producers}
                           faculty={faculty}
                           link={link}
@@ -177,20 +190,29 @@ export default function Activities({ activities }) {
               <ul className={styles.grid}>
                 {activities.map(
                   ({
+                    id,
                     name,
                     description,
-                    time,
+                    timeStart,
+                    timeEnd,
                     week,
                     producers,
                     faculty,
                     link,
                   }) => {
-                    if (time == 400 && week == weekView) {
+                    if (
+                      timeStart >= 400 &&
+                      timeEnd <= 630 &&
+                      week == weekView
+                    ) {
                       return (
                         <Activity
                           style={{ maxWidth: "20em" }}
+                          key={id}
                           name={name}
                           description={description}
+                          timeStart={timeStart}
+                          timeEnd={timeEnd}
                           producers={producers}
                           faculty={faculty}
                           link={link}

@@ -14,7 +14,7 @@
 
 .headingLink a:hover {
   color: #f07855;
-  background-color: #fff;
+  background-color: #cccccc;
 }
 
 .popupName a {
@@ -27,7 +27,7 @@
 
 .popupName a:hover {
   color: #f07855;
-  background-color: #fff;
+  background-color: #cccccc;
 }
 
 .marker {
@@ -63,5 +63,5 @@
 
 .button:hover {
   color: #f07855;
-  background-color: white;
+  background-color: #cccccc;
 }
