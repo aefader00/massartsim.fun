@@ -25,7 +25,7 @@ body {
 
 .headingLink a:hover {
   color: #f07855;
-  background-color: #fff;
+  background-color: #cccccc;
 }
 
 a {
@@ -53,7 +53,7 @@ h3 {
 
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-BoldCondensed.ttf");
+  src: url("/fonts/Roboto/Roboto-Condensed.ttf");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
