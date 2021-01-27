@@ -6,8 +6,10 @@ import styles from "../../styles/home.module.css";
 export default function Home() {
   return (
     <Layout>
-      <title>Welcome!</title>
-      <link rel="icon" href="/favicon.ico" />
+      <Head>
+        <title>Welcome!</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className={styles.text}>
         <div>
           <h1 className={styles.heading}>

@@ -1,0 +1,59 @@
+.heading a {
+  margin: auto;
+  color: #231f20;
+  background-color: #f07855;
+  max-width: 35%;
+  padding: 0.25rem;
+}
+
+.headingLink a {
+  color: #231f20;
+  background-color: #f07855;
+  max-width: 75%;
+  padding: 0.25rem;
+}
+
+.headingLink a:hover {
+  color: #f07855;
+  background-color: #cccccc;
+}
+
+.select {
+  font-family: "roboto";
+  font-size: 0.75em;
+  color: #231f20;
+  padding: 0.5rem;
+  border: solid #231f20;
+  border-radius: 0.5em;
+}
+
+.error {
+  display: inline-block;
+  padding: 0.5em;
+}
+
+.error a {
+  font-family: "aharoni";
+  margin: auto;
+  color: #231f20;
+  background-color: #f07855;
+  padding: 0.25rem;
+}
+
+.button {
+  font-family: "roboto";
+  background-color: #f07855;
+  border: 0.25em solid #231f20;
+  border-radius: 0.5em;
+  color: #231f20;
+  padding: 0.35rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #f07855;
+  background-color: white;
+}
