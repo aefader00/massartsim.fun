@@ -113,9 +113,18 @@ export default function Activities({ activities }) {
                     link,
                   }) => {
                     if (timeStart < 200 && week == weekView) {
+                      var numberOfActivites = 0;
+
+                      // Loop through the found activities again to see how many other activities are in this time slot.
+                      activities.map(({ timeStart, week }) => {
+                        if (timeStart < 200 && week == weekView) {
+                          numberOfActivites = numberOfActivites + 1;
+                        }
+                      });
+
                       return (
                         <Activity
-                          style={{ maxWidth: "20em" }}
+                          style={{ maxWidth: `${100 / numberOfActivites}%` }}
                           key={id}
                           name={name}
                           description={description}
@@ -155,9 +164,23 @@ export default function Activities({ activities }) {
                       timeEnd <= 330 &&
                       week == weekView
                     ) {
+                      var numberOfActivites = 0;
+
+                      // Loop through the found activities again to see how many other activities are in this time slot.
+                      activities.map(({ timeStart, timeEnd, week }) => {
+                        if (
+                          timeStart >= 200 &&
+                          timeEnd <= 330 &&
+                          week == weekView
+                        ) {
+                          numberOfActivites = numberOfActivites + 1;
+                        }
+                      });
                       return (
                         <Activity
-                          style={{ maxWidth: "20em" }}
+                          style={{
+                            maxWidth: `${100 / numberOfActivites - 5}%`,
+                          }}
                           key={id}
                           name={name}
                           description={description}
@@ -178,13 +201,61 @@ export default function Activities({ activities }) {
             <td className={styles.timeslot}>
               3:30 PM <br />-<br /> 4:00 PM
             </td>
-            <td style={{ padding: "0.75em" }}>
-              <h3>Screen Break</h3>
+            <td>
+              <ul className={styles.grid}>
+                {activities.map(
+                  ({
+                    id,
+                    name,
+                    description,
+                    timeStart,
+                    timeEnd,
+                    week,
+                    producers,
+                    faculty,
+                    link,
+                  }) => {
+                    if (
+                      timeStart >= 330 &&
+                      timeEnd <= 400 &&
+                      week == weekView
+                    ) {
+                      var numberOfActivites = 0;
+
+                      // Loop through the found activities again to see how many other activities are in this time slot.
+                      activities.map(({ timeStart, timeEnd, week }) => {
+                        if (
+                          timeStart >= 330 &&
+                          timeEnd <= 400 &&
+                          week == weekView
+                        ) {
+                          numberOfActivites = numberOfActivites + 1;
+                        }
+                      });
+                      return (
+                        <Activity
+                          style={{
+                            maxWidth: `${100 / numberOfActivites - 5}%`,
+                          }}
+                          key={id}
+                          name={name}
+                          description={description}
+                          timeStart={timeStart}
+                          timeEnd={timeEnd}
+                          producers={producers}
+                          faculty={faculty}
+                          link={link}
+                        />
+                      );
+                    }
+                  }
+                )}
+              </ul>
             </td>
           </tr>
           <tr>
             <td className={styles.timeslot}>
-              4:00 PM <br />-<br /> 6:30 PM
+              4:00 PM <br />-<br /> 5:30 PM
             </td>
             <td>
               <ul className={styles.grid}>
@@ -202,12 +273,82 @@ export default function Activities({ activities }) {
                   }) => {
                     if (
                       timeStart >= 400 &&
+                      timeEnd <= 530 &&
+                      week == weekView
+                    ) {
+                      var numberOfActivites = 0;
+
+                      // Loop through the found activities again to see how many other activities are in this time slot.
+                      activities.map(({ timeStart, timeEnd, week }) => {
+                        if (
+                          timeStart >= 400 &&
+                          timeEnd <= 530 &&
+                          week == weekView
+                        ) {
+                          numberOfActivites = numberOfActivites + 1;
+                        }
+                      });
+                      return (
+                        <Activity
+                          style={{
+                            maxWidth: `${100 / numberOfActivites - 5}%`,
+                          }}
+                          key={id}
+                          name={name}
+                          description={description}
+                          timeStart={timeStart}
+                          timeEnd={timeEnd}
+                          producers={producers}
+                          faculty={faculty}
+                          link={link}
+                        />
+                      );
+                    }
+                  }
+                )}
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td className={styles.timeslot}>
+              5:30 PM <br />-<br /> 6:30 PM
+            </td>
+            <td>
+              <ul className={styles.grid}>
+                {activities.map(
+                  ({
+                    id,
+                    name,
+                    description,
+                    timeStart,
+                    timeEnd,
+                    week,
+                    producers,
+                    faculty,
+                    link,
+                  }) => {
+                    if (
+                      timeStart >= 530 &&
                       timeEnd <= 630 &&
                       week == weekView
                     ) {
+                      var numberOfActivites = 0;
+
+                      // Loop through the found activities again to see how many other activities are in this time slot.
+                      activities.map(({ timeStart, timeEnd, week }) => {
+                        if (
+                          timeStart >= 530 &&
+                          timeEnd <= 630 &&
+                          week == weekView
+                        ) {
+                          numberOfActivites = numberOfActivites + 1;
+                        }
+                      });
                       return (
                         <Activity
-                          style={{ maxWidth: "20em" }}
+                          style={{
+                            maxWidth: `${100 / numberOfActivites - 5}%`,
+                          }}
                           key={id}
                           name={name}
                           description={description}

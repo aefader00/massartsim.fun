@@ -22,6 +22,11 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
+            <Link href="/links">
+              <a>Quick Links</a>
+            </Link>
+          </li>
+          <li>
             <Link href="https://discord.gg/NvrwEPa">
               <a>Discord Server</a>
             </Link>

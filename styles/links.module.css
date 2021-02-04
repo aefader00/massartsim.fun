@@ -1,0 +1,37 @@
+.heading a {
+  margin: auto;
+  color: #231f20;
+  background-color: #f07855;
+  max-width: 35%;
+  padding: 0.25rem;
+}
+
+.headingLink a {
+  color: #231f20;
+  background-color: #f07855;
+  max-width: 75%;
+  padding: 0.25rem;
+}
+
+.headingLink a:hover {
+  color: #f07855;
+  background-color: #cccccc;
+}
+
+.list {
+  padding: 0;
+}
+
+.list li {
+  color: #b35a3e;
+  list-style: none;
+  padding: 0.5em;
+}
+.list a {
+  color: #f07855;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.list a:hover {
+  background-color: white;
+}
