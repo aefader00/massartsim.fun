@@ -43,9 +43,9 @@ export default function controlPanel() {
           onSubmit={(values, { resetForm }) => {
             queryDatabase(values);
             alert(
-              `Congratulations, you have sent a query to the database!\n\nWait a few minutes and then check to make sure the Activity has been uploaded properly. If it hasn't, contact Anthony. This form will now reset.`
+              `Congratulations, you have sent a query to the database!\n\nWait a few minutes and then check to make sure the Activity has been uploaded properly. If it hasn't, contact Anthony.`
             );
-            resetForm();
+            //resetForm();
           }}
           validate={(values) => {
             const errors = {};
@@ -53,6 +53,9 @@ export default function controlPanel() {
             if (values.name == "") {
               errors.name = "Required.";
             }
+            // if (values.name.includes("'")) {
+            //   errors.name = "Don't use the ' character.";
+            // }
 
             if (values.description == "") {
               errors.description = "Required.";
