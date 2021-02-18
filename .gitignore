@@ -38,3 +38,4 @@ yarn-error.log*
 
 # database
 activities.sqlite
+activities.sqlite
