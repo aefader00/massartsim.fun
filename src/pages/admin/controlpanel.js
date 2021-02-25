@@ -100,7 +100,7 @@ export default function Activities({ activities }) {
           </tr>
           <tr>
             <td className={styles.timeslot}>
-              1:30 PM <br />-<br /> 2:00 PM
+              1:30 PM <br />-<br /> 2:15 PM
             </td>
             <td>
               <ul className={styles.grid}>
@@ -116,7 +116,28 @@ export default function Activities({ activities }) {
                     faculty,
                     link,
                   }) => {
-                    if (timeStart < 200 && week == weekView) {
+                    var activityTimeRange = [];
+                    var i = 0;
+
+                    do {
+                      activityTimeRange.push(timeStart + i);
+                      i += 5;
+                      if (
+                        timeStart + i == 160 ||
+                        timeStart + i == 260 ||
+                        timeStart + i == 360 ||
+                        timeStart + i == 460 ||
+                        timeStart + i == 560
+                      ) {
+                        i += 40;
+                      }
+                    } while (activityTimeRange.includes(timeEnd) != true);
+
+                    if (
+                      (activityTimeRange.includes(130 + 5) &&
+                        week == weekView) ||
+                      (activityTimeRange.includes(215 - 5) && week == weekView)
+                    ) {
                       var numberOfActivites = 0;
 
                       // Loop through the found activities again to see how many other activities are in this time slot.
@@ -147,7 +168,7 @@ export default function Activities({ activities }) {
           </tr>
           <tr>
             <td className={styles.timeslot}>
-              2:00 PM <br />-<br /> 3:30 PM
+              2:15 PM <br />-<br /> 3:45 PM
             </td>
             <td>
               <ul className={styles.grid}>
@@ -163,10 +184,27 @@ export default function Activities({ activities }) {
                     faculty,
                     link,
                   }) => {
+                    var activityTimeRange = [];
+                    var i = 0;
+
+                    do {
+                      activityTimeRange.push(timeStart + i);
+                      i += 5;
+                      if (
+                        timeStart + i == 160 ||
+                        timeStart + i == 260 ||
+                        timeStart + i == 360 ||
+                        timeStart + i == 460 ||
+                        timeStart + i == 560
+                      ) {
+                        i += 40;
+                      }
+                    } while (activityTimeRange.includes(timeEnd) != true);
+
                     if (
-                      timeStart >= 200 &&
-                      timeEnd <= 330 &&
-                      week == weekView
+                      (activityTimeRange.includes(215 + 5) &&
+                        week == weekView) ||
+                      (activityTimeRange.includes(345 - 5) && week == weekView)
                     ) {
                       var numberOfActivites = 0;
 
@@ -203,7 +241,7 @@ export default function Activities({ activities }) {
           </tr>
           <tr>
             <td className={styles.timeslot}>
-              3:30 PM <br />-<br /> 4:00 PM
+              3:45 PM <br />-<br /> 4:15 PM
             </td>
             <td>
               <ul className={styles.grid}>
@@ -219,10 +257,27 @@ export default function Activities({ activities }) {
                     faculty,
                     link,
                   }) => {
+                    var activityTimeRange = [];
+                    var i = 0;
+
+                    do {
+                      activityTimeRange.push(timeStart + i);
+                      i += 5;
+                      if (
+                        timeStart + i == 160 ||
+                        timeStart + i == 260 ||
+                        timeStart + i == 360 ||
+                        timeStart + i == 460 ||
+                        timeStart + i == 560
+                      ) {
+                        i += 40;
+                      }
+                    } while (activityTimeRange.includes(timeEnd) != true);
+
                     if (
-                      timeStart >= 330 &&
-                      timeEnd <= 400 &&
-                      week == weekView
+                      (activityTimeRange.includes(345 + 5) &&
+                        week == weekView) ||
+                      (activityTimeRange.includes(415 - 5) && week == weekView)
                     ) {
                       var numberOfActivites = 0;
 
@@ -259,7 +314,7 @@ export default function Activities({ activities }) {
           </tr>
           <tr>
             <td className={styles.timeslot}>
-              4:00 PM <br />-<br /> 5:30 PM
+              4:15 PM <br />-<br /> 5:45 PM
             </td>
             <td>
               <ul className={styles.grid}>
@@ -275,10 +330,27 @@ export default function Activities({ activities }) {
                     faculty,
                     link,
                   }) => {
+                    var activityTimeRange = [];
+                    var i = 0;
+
+                    do {
+                      activityTimeRange.push(timeStart + i);
+                      i += 5;
+                      if (
+                        timeStart + i == 160 ||
+                        timeStart + i == 260 ||
+                        timeStart + i == 360 ||
+                        timeStart + i == 460 ||
+                        timeStart + i == 560
+                      ) {
+                        i += 40;
+                      }
+                    } while (activityTimeRange.includes(timeEnd) != true);
+
                     if (
-                      timeStart >= 400 &&
-                      timeEnd <= 530 &&
-                      week == weekView
+                      (activityTimeRange.includes(415 + 5) &&
+                        week == weekView) ||
+                      (activityTimeRange.includes(545 - 5) && week == weekView)
                     ) {
                       var numberOfActivites = 0;
 
@@ -315,7 +387,7 @@ export default function Activities({ activities }) {
           </tr>
           <tr>
             <td className={styles.timeslot}>
-              5:30 PM <br />-<br /> 6:30 PM
+              5:45 PM <br />-<br /> 6:30 PM
             </td>
             <td>
               <ul className={styles.grid}>
@@ -331,10 +403,27 @@ export default function Activities({ activities }) {
                     faculty,
                     link,
                   }) => {
+                    var activityTimeRange = [];
+                    var i = 0;
+
+                    do {
+                      activityTimeRange.push(timeStart + i);
+                      i += 5;
+                      if (
+                        timeStart + i == 160 ||
+                        timeStart + i == 260 ||
+                        timeStart + i == 360 ||
+                        timeStart + i == 460 ||
+                        timeStart + i == 560
+                      ) {
+                        i += 40;
+                      }
+                    } while (activityTimeRange.includes(timeEnd) != true);
+
                     if (
-                      timeStart >= 530 &&
-                      timeEnd <= 630 &&
-                      week == weekView
+                      (activityTimeRange.includes(545 + 5) &&
+                        week == weekView) ||
+                      (activityTimeRange.includes(630 - 5) && week == weekView)
                     ) {
                       var numberOfActivites = 0;
 
