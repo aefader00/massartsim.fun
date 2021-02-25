@@ -142,7 +142,12 @@ export default function Activities({ activities }) {
 
                       // Loop through the found activities again to see how many other activities are in this time slot.
                       activities.map(({ timeStart, week }) => {
-                        if (timeStart < 200 && week == weekView) {
+                        if (
+                          (activityTimeRange.includes(130 + 5) &&
+                            week == weekView) ||
+                          (activityTimeRange.includes(215 - 5) &&
+                            week == weekView)
+                        ) {
                           numberOfActivites = numberOfActivites + 1;
                         }
                       });
@@ -211,9 +216,10 @@ export default function Activities({ activities }) {
                       // Loop through the found activities again to see how many other activities are in this time slot.
                       activities.map(({ timeStart, timeEnd, week }) => {
                         if (
-                          timeStart >= 200 &&
-                          timeEnd <= 330 &&
-                          week == weekView
+                          (activityTimeRange.includes(215 + 5) &&
+                            week == weekView) ||
+                          (activityTimeRange.includes(345 - 5) &&
+                            week == weekView)
                         ) {
                           numberOfActivites = numberOfActivites + 1;
                         }
@@ -284,9 +290,10 @@ export default function Activities({ activities }) {
                       // Loop through the found activities again to see how many other activities are in this time slot.
                       activities.map(({ timeStart, timeEnd, week }) => {
                         if (
-                          timeStart >= 330 &&
-                          timeEnd <= 400 &&
-                          week == weekView
+                          (activityTimeRange.includes(345 + 5) &&
+                            week == weekView) ||
+                          (activityTimeRange.includes(415 - 5) &&
+                            week == weekView)
                         ) {
                           numberOfActivites = numberOfActivites + 1;
                         }
@@ -357,9 +364,10 @@ export default function Activities({ activities }) {
                       // Loop through the found activities again to see how many other activities are in this time slot.
                       activities.map(({ timeStart, timeEnd, week }) => {
                         if (
-                          timeStart >= 400 &&
-                          timeEnd <= 530 &&
-                          week == weekView
+                          (activityTimeRange.includes(415 + 5) &&
+                            week == weekView) ||
+                          (activityTimeRange.includes(545 - 5) &&
+                            week == weekView)
                         ) {
                           numberOfActivites = numberOfActivites + 1;
                         }
@@ -430,9 +438,10 @@ export default function Activities({ activities }) {
                       // Loop through the found activities again to see how many other activities are in this time slot.
                       activities.map(({ timeStart, timeEnd, week }) => {
                         if (
-                          timeStart >= 530 &&
-                          timeEnd <= 630 &&
-                          week == weekView
+                          (activityTimeRange.includes(545 + 5) &&
+                            week == weekView) ||
+                          (activityTimeRange.includes(630 - 5) &&
+                            week == weekView)
                         ) {
                           numberOfActivites = numberOfActivites + 1;
                         }
