@@ -137,7 +137,24 @@ export default function Activities({ activities }) {
                       var numberOfActivites = 0;
 
                       // Loop through the found activities again to see how many other activities are in this time slot.
-                      activities.map(({ timeStart, week }) => {
+                      activities.map(({ timeStart, timeEnd, week }) => {
+                        var activityTimeRange = [];
+                        var i = 0;
+
+                        do {
+                          activityTimeRange.push(timeStart + i);
+                          i += 5;
+                          if (
+                            timeStart + i == 160 ||
+                            timeStart + i == 260 ||
+                            timeStart + i == 360 ||
+                            timeStart + i == 460 ||
+                            timeStart + i == 560
+                          ) {
+                            i += 40;
+                          }
+                        } while (activityTimeRange.includes(timeEnd) != true);
+
                         if (
                           (activityTimeRange.includes(130 + 5) &&
                             week == weekView) ||
@@ -150,7 +167,9 @@ export default function Activities({ activities }) {
 
                       return (
                         <Activity
-                          style={{ maxWidth: `${100 / numberOfActivites}%` }}
+                          style={{
+                            maxWidth: `${100 / numberOfActivites - 5}%`,
+                          }}
                           key={id}
                           name={name}
                           description={description}
@@ -211,6 +230,23 @@ export default function Activities({ activities }) {
 
                       // Loop through the found activities again to see how many other activities are in this time slot.
                       activities.map(({ timeStart, timeEnd, week }) => {
+                        var activityTimeRange = [];
+                        var i = 0;
+
+                        do {
+                          activityTimeRange.push(timeStart + i);
+                          i += 5;
+                          if (
+                            timeStart + i == 160 ||
+                            timeStart + i == 260 ||
+                            timeStart + i == 360 ||
+                            timeStart + i == 460 ||
+                            timeStart + i == 560
+                          ) {
+                            i += 40;
+                          }
+                        } while (activityTimeRange.includes(timeEnd) != true);
+
                         if (
                           (activityTimeRange.includes(215 + 5) &&
                             week == weekView) ||
@@ -285,6 +321,23 @@ export default function Activities({ activities }) {
 
                       // Loop through the found activities again to see how many other activities are in this time slot.
                       activities.map(({ timeStart, timeEnd, week }) => {
+                        var activityTimeRange = [];
+                        var i = 0;
+
+                        do {
+                          activityTimeRange.push(timeStart + i);
+                          i += 5;
+                          if (
+                            timeStart + i == 160 ||
+                            timeStart + i == 260 ||
+                            timeStart + i == 360 ||
+                            timeStart + i == 460 ||
+                            timeStart + i == 560
+                          ) {
+                            i += 40;
+                          }
+                        } while (activityTimeRange.includes(timeEnd) != true);
+
                         if (
                           (activityTimeRange.includes(345 + 5) &&
                             week == weekView) ||
@@ -359,6 +412,23 @@ export default function Activities({ activities }) {
 
                       // Loop through the found activities again to see how many other activities are in this time slot.
                       activities.map(({ timeStart, timeEnd, week }) => {
+                        var activityTimeRange = [];
+                        var i = 0;
+
+                        do {
+                          activityTimeRange.push(timeStart + i);
+                          i += 5;
+                          if (
+                            timeStart + i == 160 ||
+                            timeStart + i == 260 ||
+                            timeStart + i == 360 ||
+                            timeStart + i == 460 ||
+                            timeStart + i == 560
+                          ) {
+                            i += 40;
+                          }
+                        } while (activityTimeRange.includes(timeEnd) != true);
+
                         if (
                           (activityTimeRange.includes(415 + 5) &&
                             week == weekView) ||
@@ -433,6 +503,23 @@ export default function Activities({ activities }) {
 
                       // Loop through the found activities again to see how many other activities are in this time slot.
                       activities.map(({ timeStart, timeEnd, week }) => {
+                        var activityTimeRange = [];
+                        var i = 0;
+
+                        do {
+                          activityTimeRange.push(timeStart + i);
+                          i += 5;
+                          if (
+                            timeStart + i == 160 ||
+                            timeStart + i == 260 ||
+                            timeStart + i == 360 ||
+                            timeStart + i == 460 ||
+                            timeStart + i == 560
+                          ) {
+                            i += 40;
+                          }
+                        } while (activityTimeRange.includes(timeEnd) != true);
+
                         if (
                           (activityTimeRange.includes(545 + 5) &&
                             week == weekView) ||
