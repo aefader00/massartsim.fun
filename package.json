@@ -1,6 +1,6 @@
 {
-  "name": "sim-thursdays",
-  "version": "1.1.0",
+  "name": "massartsim.fun",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,13 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
-    "date-fns": "^2.16.1",
+    "@reach/listbox": "^0.15.0",
     "formik": "^2.2.6",
-    "next": "10.0.4",
+    "next": "10.0.8",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-map-gl": "^6.0.3",
-    "sqlite": "^4.0.19",
-    "sqlite3": "^5.0.0"
+    "react-map-gl": "^6.1.11",
+    "sqlite": "^4.0.21",
+    "sqlite3": "^5.0.2",
+    "swr": "^0.5.5"
   }
 }

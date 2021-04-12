@@ -1,0 +1,32 @@
+.activity {
+  padding: 1rem;
+  margin: 0.5rem;
+  min-width: 15%;
+  text-align: left;
+  border: 0.25rem solid var(--darkBlue);
+  border-radius: 1rem;
+  background-color: var(--black);
+}
+
+.activity:hover {
+  border-color: var(--blue);
+  background-color: var(--darkGrey);
+  cursor: pointer;
+}
+
+.activity h2 {
+  color: var(--darkBlue);
+}
+
+.activity:hover h2 {
+  color: var(--blue);
+}
+
+.details {
+  padding: 0;
+  list-style: none;
+}
+
+.details li {
+  padding: 0.25rem;
+}

@@ -1,0 +1,78 @@
+.blurb {
+  text-align: center;
+}
+
+.blurb h1 {
+  color: var(--black);
+  background-color: var(--blue);
+  display: inline-block;
+  padding: 0.5rem;
+  margin-bottom: 0;
+}
+
+.blurb p {
+  margin: 1rem;
+}
+
+.interface {
+  text-align: center;
+}
+
+.interface h1 {
+  color: var(--black);
+  background-color: var(--blue);
+  display: inline-block;
+  padding: 0.5rem;
+  margin-bottom: 0;
+}
+
+.interface p {
+  margin: 1rem;
+}
+
+.interface textarea {
+  height: 1.25rem;
+  width: 15rem;
+}
+
+.submit {
+  background-color: var(--darkBlue);
+  color: var(--black);
+  border: transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.submit:hover {
+  color: var(--beige);
+  background-color: var(--blue);
+}
+
+.error {
+  background-color: var(--darkBlue);
+  color: var(--black);
+  border: transparent;
+  border-radius: 0.5rem;
+  padding: 0.33rem;
+  margin-left: 0.5rem;
+  display: inline-block;
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0.25em;
+  justify-content: center;
+}
+
+.field {
+  padding: 1rem;
+}
+
+.field label {
+  padding: 1rem;
+}

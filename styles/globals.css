@@ -1,31 +1,30 @@
+:root {
+  --black: #342f2c;
+  --darkGrey: #423e3a;
+  --grey: #6b6a65;
+  --darkOrange: #f18149;
+  --orange: #ef9849;
+  --darkBeige: #c1a18a;
+  --beige: #f6e7de;
+  --darkBlue: #5b7a8c;
+  --blue: #768a88;
+}
+
 html,
 body {
-  margin: auto;
+  padding: 0;
+  margin: 0;
   font-family: "roboto";
+  color: var(--beige);
   background: url("/tile.png") repeat;
-  background-color: #231f20;
-  color: #f07855;
-  font-size: 1.1em;
+
+  background-color: var(--black);
 }
 
-.heading a {
-  color: #231f20;
-  background-color: #f07855;
-  margin: auto;
-  max-width: 33%;
-  padding: 0.25em;
-}
-
-.headingLink a {
-  color: #231f20;
-  background-color: #f07855;
-  max-width: 75%;
-  padding: 0.25rem;
-}
-
-.headingLink a:hover {
-  color: #f07855;
-  background-color: #cccccc;
+h1,
+h2,
+h3 {
+  font-family: "aharoni";
 }
 
 a {
@@ -37,15 +36,9 @@ a {
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "aharoni";
-}
-
 @font-face {
-  font-family: "aharoni";
-  src: url("/fonts/aharoni/ahronbd.ttf");
+  font-family: "Aharoni";
+  src: url("/fonts/Aharoni/Aharoni-Bold.ttf");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -57,9 +50,4 @@ h3 {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-}
-
-p {
-  margin: auto;
-  max-width: 95%;
 }

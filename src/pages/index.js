@@ -1,20 +1,23 @@
+// Import modules.
 import Head from "next/head";
+
 import Link from "next/link";
-import Layout from "../../components/layout/layout.js";
-import styles from "../../styles/home.module.css";
+
+// Import components.
+import Header from "../../components/header.js";
+
+// Import functions and variables.
+
+// Import styles.
+import styles from "../../styles/pages/home.module.css";
 
 export default function Home() {
   return (
-    <Layout>
-      <Head>
-        <title>Welcome!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className={styles.text}>
+    <div>
+      <Header />
+      <div className={styles.blurb}>
         <div>
-          <h1 className={styles.heading}>
-            <a>WELCOME TO MASSARTSIM.FUN</a>
-          </h1>
+          <h1>WELCOME TO MASSARTSIM.FUN</h1>
           <p>
             This is a student-run website for everyone in the Studio of
             Interrelated Media department at Massachusetts College of Art and
@@ -26,13 +29,8 @@ export default function Home() {
             hopefully makes the quarantine a little more tolerable.
           </p>
         </div>
-        <br />
         <div>
-          <h3 className={styles.headingLink}>
-            <Link href="/activities">
-              <a>Thursday Activities</a>
-            </Link>
-          </h3>
+          <h2>Thursday Activities</h2>
           <p>
             With this tool, you can browse through every scheduled activity in
             the semester.
@@ -53,13 +51,8 @@ export default function Home() {
             approved it'll be added to the schedule!
           </p>
         </div>
-        <br />
         <div>
-          <h3 className={styles.headingLink}>
-            <Link href="/map">
-              <a>Collaboration Map</a>
-            </Link>
-          </h3>
+          <h2>Collaboration Map</h2>
           <p>
             With this tool, you can check a map and see what students or faculty
             are near you, so you can meet up with them and collaborate in
@@ -74,13 +67,8 @@ export default function Home() {
             Only give as much information as you feel comfortable with.
           </p>
         </div>
-        <br />
         <div>
-          <h3 className={styles.headingLink}>
-            <Link href="https://discord.gg/NvrwEPa">
-              <a>Discord Server</a>
-            </Link>
-          </h3>
+          <h2>Discord Server</h2>
           <p>
             This will redirect you to the student-run Studio for Interrelated
             Media Discord Server! There, you'll be able to hang out with your
@@ -93,8 +81,7 @@ export default function Home() {
             servers. Just click on the link, and say hello!
           </p>
         </div>
-        <div style={{ padding: "2em" }}></div>
       </div>
-    </Layout>
+    </div>
   );
 }

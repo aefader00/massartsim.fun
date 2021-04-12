@@ -1,0 +1,77 @@
+.blurb {
+  text-align: center;
+}
+
+.blurb h1 {
+  color: var(--black);
+  background-color: var(--orange);
+  display: inline-block;
+  padding: 0.5rem;
+  margin-bottom: 0;
+}
+
+.blurb p {
+  margin: 1rem;
+}
+
+.participate {
+  background-color: var(--darkOrange);
+  color: var(--black);
+  border: transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.participate:hover {
+  color: var(--beige);
+  background-color: var(--orange);
+}
+
+.map {
+  margin: auto;
+  border-radius: 1rem;
+  border: 0.5rem solid var(--grey);
+  margin: auto;
+  width: 95vw;
+  height: 70vh;
+  margin: 2rem;
+}
+
+.marker {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.marker img {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.popup {
+  text-align: center;
+  color: var(--black);
+}
+
+.popup h3 {
+  color: var(--black);
+  background-color: var(--darkOrange);
+  display: block;
+  padding: 0.5rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+}
+
+.popup h3:hover {
+  color: var(--beige);
+  background-color: var(--orange);
+}
+
+@media (max-width: 400px) {
+  .map {
+    margin: 1rem;
+    width: 90%;
+  }
+}

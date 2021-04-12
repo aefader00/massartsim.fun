@@ -1,0 +1,33 @@
+.banner {
+  padding-top: 10rem;
+  background-color: var(--grey);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--darkBlue);
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  list-style: none;
+  color: var(--black);
+}
+
+.navbar li a {
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  display: block;
+}
+
+.navbar li a:hover {
+  color: var(--beige);
+  background-color: var(--blue);
+}

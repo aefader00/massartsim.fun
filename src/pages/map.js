@@ -1,19 +1,25 @@
-import React, { useState } from "react";
-import ReactMapGL, { Marker, Popup } from "react-map-gl";
-
+// Import modules.
 import Head from "next/head";
+
 import Link from "next/link";
 
-import Layout from "../../components/layout/layout.js";
+import React, { useState } from "react";
 
-import styles from "../../styles/map.module.css";
+import ReactMapGL, { Marker, Popup } from "react-map-gl";
 
-import { getMarkers } from "../../database/getMarkers.js";
+// Import components.
+import Header from "../../components/header.js";
+
+// Import functions and variables.
+import { token } from "../../mapboxToken.js";
+
+import { getMarkers } from "../../database/queryDatabase.js";
+
+// Import styles.
+import styles from "../../styles/pages/map.module.css";
 
 export default function Map({ markers }) {
-  const token =
-    "pk.eyJ1IjoiYWVmYWRlciIsImEiOiJja2syb2MwcDExMG4zMnBwZWs4NG9tZjkxIn0.uD5tNg6XC2NyOpNoVME49w";
-
+  // Define the viewport of the map.
   const [viewport, setViewport] = useState({
     latitude: 42.358167,
     longitude: -71.063694,
@@ -22,40 +28,39 @@ export default function Map({ markers }) {
     zoom: 12,
   });
 
+  // Reserve these variables for later.
   const [selectedMarker, setMarker] = useState(null);
 
   return (
-    <Layout>
+    <div>
       <Head>
         <title>Collaboration Map</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className={styles.heading}>
-        <a>COLLABORATION MAP</a>
-      </h1>
-      <div>
-        Click on any of the markers below to be shown a name and a face from the
-        department.
-        <br /> Click on the name to be taken to that individual's profile on the
-        official Studio for Interrelated Media website.
+
+      {/* Render the header and navbar. */}
+      <Header />
+      {/* Render the title of the page and a brief description. */}
+      <div className={styles.blurb}>
+        <h1>COLLABORATION MAP</h1>
+        <p>
+          Click on any of the markers below to be shown a name and a face from
+          the department. Click on the popup to be taken to that individual's
+          profile on the official Studio for Interrelated Media website.
+        </p>
       </div>
-      <div style={{ margin: "0.75em" }}>
+      {/* Render the button that links to the request form. */}
+      <div style={{ textAlign: "center", margin: "1rem" }}>
         <Link href="https://forms.gle/nA5iByDCmGa3RTVi9">
-          <button className={styles.button}>
-            <a>Want to be on this map? Fill out a request here!</a>
-          </button>
+          <a>
+            <div className={styles.participate}>
+              Want to be on this map? Fill out a request here!
+            </div>
+          </a>
         </Link>
       </div>
-      <div
-        style={{
-          margin: "auto",
-          borderRadius: "0.5em ",
-          border: "0.5em solid #231f20",
-          margin: "auto",
-          width: "95%",
-          height: "33em",
-        }}
-      >
+      {/* Render the map. */}
+      <div className={styles.map}>
         <ReactMapGL
           {...viewport}
           mapboxApiAccessToken={token}
@@ -64,6 +69,7 @@ export default function Map({ markers }) {
             setViewport(viewport);
           }}
         >
+          {/* Loop through every marker in the database, placing them down on the map. */}
           {markers.map(
             ({ id, name, massart_id, role, latitude, longitude }) => {
               return (
@@ -90,6 +96,8 @@ export default function Map({ markers }) {
                       });
                     }}
                   >
+                    {/* Render a black marker if the person it represents is a student. */}
+                    {/* Else, if it's a member of the faculty, render a white marker. */}
                     <img
                       src={
                         role == "student"
@@ -102,8 +110,11 @@ export default function Map({ markers }) {
               );
             }
           )}
+          {/* If the user clicks on a marker, render a popup displaying a picture of the person it represents alongside their name.*/}
+          {/* Clicking anywhere on the popup should link to their profile on the official Studio for Interrelated Media website.  */}
           {selectedMarker ? (
             <Popup
+              className={styles.popup}
               latitude={selectedMarker.latitude}
               longitude={selectedMarker.longitude}
               closeOnClick={false}
@@ -115,22 +126,20 @@ export default function Map({ markers }) {
                 target="_new"
                 href={`https://inside.massartsim.org/profile/${selectedMarker.massart_id}`}
               >
-                <div className={styles.popupName}>
-                  <img
-                    style={{
-                      padding: "0.5em",
-                    }}
-                    src={`https://inside.massartsim.org/data/photos/official/${selectedMarker.massart_id}.jpg`}
-                  />
-                  <br />
-                  <a>{selectedMarker.name}</a>
-                </div>
+                <a>
+                  <div>
+                    <img
+                      src={`https://inside.massartsim.org/data/photos/official/${selectedMarker.massart_id}.jpg`}
+                    />
+                    <h3>{selectedMarker.name}</h3>
+                  </div>
+                </a>
               </Link>
             </Popup>
           ) : null}
         </ReactMapGL>
       </div>
-    </Layout>
+    </div>
   );
 }
 

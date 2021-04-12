@@ -1,0 +1,85 @@
+.blurb {
+  text-align: center;
+}
+
+.blurb h1 {
+  color: var(--black);
+  background-color: var(--orange);
+  display: inline-block;
+  padding: 0.5rem;
+  margin-bottom: 0;
+}
+
+.blurb p {
+  margin: 1rem;
+}
+
+.participate {
+  background-color: var(--darkOrange);
+  color: var(--black);
+  border: transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.participate:hover {
+  color: var(--beige);
+  background-color: var(--orange);
+}
+
+.week {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.week span {
+  color: var(--black);
+  background-color: var(--darkOrange);
+  border: transparent;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.arrow {
+  padding: 0.4rem;
+  padding-right: 0;
+}
+
+.option {
+  color: var(--black);
+}
+
+.table {
+  margin: auto;
+  max-width: 95vw;
+  border-spacing: 1rem;
+}
+.td {
+  margin: 0.25em;
+  padding: 0.25em;
+  border: 0.25rem solid var(--grey);
+  border-radius: 1rem;
+  text-align: left;
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0.25em;
+  justify-content: center;
+}
+
+.time {
+  text-align: center;
+  margin: 0.75rem;
+}
+
+@media (max-width: 400px) {
+  .ul {
+    flex-direction: column;
+  }
+}
